@@ -1,3 +1,4 @@
+import { Route, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,7 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AboutComponent {
 
-  constructor(private ActivatedRoute:ActivatedRoute){ }
+  constructor(
+    private ActivatedRoute:ActivatedRoute,
+    private router:Router
+    ){ }
 
   ngOnInit() :void {
     this.ActivatedRoute.params.subscribe(
@@ -18,5 +22,24 @@ export class AboutComponent {
     this.ActivatedRoute.queryParams.subscribe(
       res => console.log(res)
       )
+
+      setInterval( ()=> {
+        this.router.navigate(['404']); //redireciona sem refazer o load da página
+        //this.router.navigateByUrl('404'); //redireciona e faz o reload da página
+      }, 5000)
+
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
