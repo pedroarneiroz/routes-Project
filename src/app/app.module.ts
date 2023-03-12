@@ -1,3 +1,4 @@
+import { MenuComponent } from './shared/menu/menu.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +15,8 @@ import { PageErrorComponent } from './pages/page-error/page-error.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    PageErrorComponent
+    PageErrorComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
