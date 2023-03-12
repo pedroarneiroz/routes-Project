@@ -7,7 +7,9 @@ import { PageErrorComponent } from "./pages/page-error/page-error.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
-  { path: 'about/:id/:username', component: AboutComponent},
+  { path: 'about', component: AboutComponent, children: [
+    { path: ':id/:username', component: AboutComponent}
+  ]},
   { path: '404', component: PageErrorComponent},
   //Coringa Route
   { path: '**', redirectTo:'404'}
