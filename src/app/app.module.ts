@@ -1,3 +1,4 @@
+import { MenuComponent } from './shared/menu/menu.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -5,16 +6,17 @@ import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 
 //Pages
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { PageErrorComponent } from './page-error/page-error.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { PageErrorComponent } from './pages/page-error/page-error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    PageErrorComponent
+    PageErrorComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

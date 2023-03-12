@@ -1,0 +1,43 @@
+<header>
+    <nav>
+
+        <!-- Usando link HTML puro -->
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/404">Error</a>
+            </li>
+        </ul>
+
+        <!-- Rotas Angular -->
+        <ul>
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
+            <li>
+                <a routerLink="/about">About</a>
+            </li>
+            <li>
+                <a routerLink="/404">Error</a>
+            </li>
+        </ul>
+
+        <!-- Rotas Angular Parametrisadas  -->
+        <ul>
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
+            <li>
+                <a routerLink="['/about']">About</a>
+            </li>
+            <li>
+                <a routerLink="['/404']">Error</a>
+            </li>
+        </ul>
+    </nav>
+</header>
