@@ -1,7 +1,7 @@
 <header>
     <nav>
 
-        <!-- Usando link HTML puro -->
+        <h3>Usando link HTML Puro</h3>
         <ul>
             <li>
                 <a href="/">Home</a>
@@ -14,7 +14,7 @@
             </li>
         </ul>
 
-        <!-- Rotas Angular -->
+        <h3>Rotas Angular</h3>
         <ul>
             <li>
                 <a routerLink="/">Home</a>
@@ -27,16 +27,16 @@
             </li>
         </ul>
 
-        <!-- Rotas Angular Parametrisadas  -->
+        <h3>Rotas Angular Parametrisadas </h3>
         <ul>
             <li>
-                <a routerLink="/">Home</a>
+                <a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a>
             </li>
             <li>
-                <a routerLink="['/about']">About</a>
+                <a routerLink="/about" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">About</a>
             </li>
             <li>
-                <a routerLink="['/404']">Error</a>
+                <a [routerLink]="['/404']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Error</a>
             </li>
         </ul>
     </nav>
