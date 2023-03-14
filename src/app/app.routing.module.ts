@@ -10,6 +10,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent, children: [
     { path: ':id/:username', component: AboutComponent}
   ]},
+  { path: 'dashboard',
+  loadChildren: () =>  import('./dashboard/dashboard.module').then( m => m.DashboardModule) },
+
   { path: '404', component: PageErrorComponent},
   //Coringa Route
   { path: '**', redirectTo:'404'}
